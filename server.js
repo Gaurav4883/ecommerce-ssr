@@ -1,5 +1,6 @@
 const express = require("express")
 const cors = require("cors")
+const hbs = require("hbs")
 
 const app = express()
 const PORT = 5000
@@ -8,6 +9,7 @@ app.use(cors())
 //ssr setup
 app.set('view engine', 'hbs')
 app.use(express.static('./public'))
+hbs.registerPartials('./views/partials')
 
 const productData = require("./data/products.json")
 const productRouter = require("./routes/productRoutes.js")

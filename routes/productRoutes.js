@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
         const minifiedProd = newProd.filter((prod) => prod.price >= minprice)
         res.json(minifiedProd)
     } else {
-        res.render('index', { title: 'mero vai ko kapda pasal', newProd: newProd })
+        res.render('index', { title: 'mero vai ko kapda pasal', newProd: newProd, })
     }
 
 
